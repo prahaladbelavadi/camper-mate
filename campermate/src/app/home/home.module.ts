@@ -16,16 +16,11 @@ import { MyDetailsPage } from '../my-details/my-details.page';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,HomePageRoutingModule,
+    IonicModule,
+    HomePageRoutingModule,
     LocationPageModule,
     CampDetailsPage,
     MyDetailsPage,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage
-      }
-    ])
   ],
   declarations: [HomePage]
 })
