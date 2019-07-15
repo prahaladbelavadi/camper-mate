@@ -1,5 +1,7 @@
 {
   "name": "campermate",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
