@@ -19,46 +19,50 @@
   </ion-card>
 
   <ion-list lines="none">
-    <ion-item>
-      <ion-label position="stacked">
-        Gate access code
-      </ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+    <form [formGroup]="campDetailsForm" (input)="saveForm()">
+      
+      <ion-item>
+        <ion-label position="stacked">
+          Gate access code
+        </ion-label>
+        <ion-input type="text" formControlName="gateAccessCode"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">
-        Ammenities Code
-      </ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">
+          Ammenities Code
+        </ion-label>
+        <ion-input type="text" formControlName="amenitiesCode"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">
-        Wifi Password
-      </ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">
+          Wifi Password
+        </ion-label>
+        <ion-input type="text" formControlName="wifiPassword"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">
-        Phone Number
-      </ion-label>
-      <ion-input type="text"></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">
+          Phone Number
+        </ion-label>
+        <ion-input type="text" formControlName="phoneNumber"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">
-        Departure Date
-      </ion-label>
-      <ion-datetime displayFormat="DD/MM/YY"></ion-datetime>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">
+          Departure Date
+        </ion-label>
+        <ion-datetime displayFormat="DD/MM/YY" formControlName="departure"></ion-datetime>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="stacked">
-        Notes
-      </ion-label>
-      <ion-textarea type="text"></ion-textarea>
-    </ion-item>
+      <ion-item>
+        <ion-label position="stacked">
+          Notes
+        </ion-label>
+        <ion-textarea formControlName="notes" type="text"></ion-textarea>
+      </ion-item>
+
+    </form>
   </ion-list>
 </ion-content>

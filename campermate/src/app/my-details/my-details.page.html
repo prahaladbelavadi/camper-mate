@@ -1,9 +1,45 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>MyDetails</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="assets/images/logo.png" class="logo" />
+    </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content padding>
+  
+  <ion-card>
+    <ion-card-header>
+      My Details
+    </ion-card-header>
+    <ion-card-content>
+      Update this form with your details so you have an easy
+      reference for later.
+    </ion-card-content>
+  </ion-card>
 
-<ion-content>
+  <ion-list lines="none">
+<form [formGroup]="myDetailsForm" (input)="saveForm()"></form>
 
+    <ion-item>
+      <ion-label position="stacked">Car Registration</ionlabel>
+        <ion-input type="text" formControlName="carRegistration"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Trailer
+        Registration</ion-label>
+      <ion-input type="text" formControlName="trailerRegistration"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Trailer Dimensions</ionlabel>
+        <ion-input type="text" formControlName="trailerDimensions"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked" formControlName="notes">Phone Number</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Notes</ion-label>
+      <ion-textarea type="text"></ion-textarea>
+    </ion-item>
+  </ion-list>
 </ion-content>
