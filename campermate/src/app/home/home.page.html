@@ -1,14 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-tabs>
+  <ion-tab-button label="location" icon="navigate" href="/tabs/(location:location)">
+    <ion-router-outlet name="location"> </ion-router-outlet>
+  </ion-tab-button>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
-</ion-content>
+  <ion-tab-button label="My Details" icon="person" href="/tabs/(me:me)">
+    <ion-router-outlet name="me"></ion-router-outlet>
+  </ion-tab-button>
+
+  <ion-tab-button label="Camp Details" icon="bookmarks" href="/tabs/(camp:camp)">
+    <ion-router-outlet name="camp"> </ion-router-outlet>
+  </ion-tab-button>
+</ion-tabs>

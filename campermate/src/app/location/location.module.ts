@@ -12,7 +12,8 @@ import { GoogleMapComponent } from '../components/google-map/google-map.componen
 const routes: Routes = [
   {
     path: '',
-    component: LocationPage
+    component: LocationPage,
+    outlet: 'location'
   }
 ];
 

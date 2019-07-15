@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Location</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="assets/images/logo.png" class="logo" />
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="setLocation()">
+        <ion-icon slot="icononly" name="pin"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="takeMeHome()">
+        <ion-icon slot="icononly" name="walk"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <!-- Google Map component will be inserted here later -->
 </ion-content>
