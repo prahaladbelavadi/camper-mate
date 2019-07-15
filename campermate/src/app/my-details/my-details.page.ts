@@ -24,12 +24,20 @@ export class MyDetailsPage implements OnInit {
   }
 
   ngOnInit() {
-  
+    this.dataService.getMyDetails().then((details) => {
+      let formControls: any = this.myDetailsForm.controls;
+      if (details != null) {
+        formControls.carRegistration.setValue(details.carRegistration);
+        formControls.trailerRegistration.setValue(details.trailerRegistration);
+        formControls.trailerDimensions.setValue(details.trailerDimensions);
+        formControls.phoneNumber.setValue(details.phoneNumber);
+        formControls.notes.setValue(details.notes);
+      }
+    });
   }
 
   saveForm(): void {
-  // this.dataService.setMyDetails(this.myDetailsForm.value);
+    this.dataService.setMyDetails(this.myDetailsForm.value);
   }
-
-
 }
+

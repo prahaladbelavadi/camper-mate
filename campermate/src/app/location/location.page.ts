@@ -26,11 +26,17 @@ export class LocationPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.map.init().then((res) => {
-      console.log('map ready');
-    }, (err) => {
+    this.dataService.getLocation().then((location) => {
+      this.map.init().then((res) => {
+      if(location != null){
+      this.latitude = location.latitude;
+      this.longitude = location.longitude;
+      this.map.changeMarker(this.latitude, this.longitude);
+      }
+      }, (err) => {
       console.log(err);
-    });
+      });
+      });
   }
 
   setLocation(): void {
@@ -47,7 +53,7 @@ export class LocationPage implements OnInit {
           latitude: this.latitude,
           longitude: this.longitude
         };
-        //this.dataService.setLocation(data);
+        this.dataService.setLocation(data);
         this.alertCtrl.create({
           header: 'Location set!',
           message: 'You can now find your way back to your camp site from anywhere by clicking the button in the top right corner.',
@@ -93,4 +99,4 @@ export class LocationPage implements OnInit {
 
 }
 
-}
+
