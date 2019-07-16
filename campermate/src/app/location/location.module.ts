@@ -24,6 +24,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [LocationPage, GoogleMapComponent]
+  declarations: [LocationPage]
 })
 export class LocationPageModule {}

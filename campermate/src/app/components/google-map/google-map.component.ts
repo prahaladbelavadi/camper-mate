@@ -4,7 +4,7 @@ import { Platform } from '@ionic/angular';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Plugins } from '@capacitor/core';
 const { Geolocation, Network } = Plugins;
-
+declare var google: any;
 @Component({
   selector: 'app-google-map',
   templateUrl: './google-map.component.html',

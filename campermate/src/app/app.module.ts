@@ -7,9 +7,10 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { GoogleMapComponent } from './components/google-map/google-map.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, , GoogleMapComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
